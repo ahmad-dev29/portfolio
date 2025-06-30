@@ -16,7 +16,8 @@ function Mainpage() {
     const colorClasses = [
         'bg-cyan-500', 'bg-purple-600', 'bg-pink-600', 'bg-indigo-500', 'bg-teal-600',
         'bg-blue-600', 'bg-emerald-500', 'bg-rose-600', 'bg-fuchsia-600', 'bg-sky-500',
-        'bg-violet-500', 'bg-orange-500', 'bg-red-500', 'bg-amber-500', 'bg-lime-500'
+        'bg-violet-500', 'bg-orange-500', 'bg-red-500', 'bg-amber-500', 'bg-lime-500',
+        'bg-green-500', 'bg-yellow-400', 'bg-blue-900', 'bg-purple-800', 'bg-rose-800'
     ];
     const [bgIndex, setBgIndex] = useState(0);
 
@@ -83,14 +84,14 @@ function Mainpage() {
                             <a
                                 href="https://drive.google.com/file/d/14YL4KaPrZ0nQxkBUTkkn6yajrXTEdzkp/view?usp=sharing"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <button className="mt-4 px-4 py-2 rounded-full bg-blue-700 hover:bg-blue-800">
+                                <button className="mt-4 px-4 py-2 rounded-full bg-blue-700 hover:bg-blue-800 transition-colors duration-300 ease-in-out">
                                     Download Resume
                                 </button>
                             </a>
                         </div>
                     </div>
-
 
                     {/* Skills Section */}
                     <div id="skills" className="mt-10">
@@ -129,117 +130,33 @@ function Mainpage() {
                         </div>
                     </div>
 
-                    {/* Projects Placeholder */}
                     {/* Projects Section */}
                     <div id="projects" className="mt-12 text-white">
                         <h3 className="text-2xl mb-6">Projects</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* Project 1 */}
-                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
-                                <h4 className="text-xl font-semibold mb-2">Limerick</h4>
-                                <p className="text-sm text-gray-300 mb-4">
-
-                                </p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href="https://limerick29.netlify.app/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    {/* <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
-                >
-                    Source Code
-                </a> */}
+                            {[
+                                { title: "Limerick", link: "https://limerick29.netlify.app/" },
+                                { title: "Illdy", link: "https://illdy29.netlify.app/" },
+                                { title: "Kerri", link: "https://kerri29.netlify.app/" },
+                                { title: "Alma", link: "https://alma29.netlify.app/" },
+                            ].map((project, i) => (
+                                <div key={i} className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
+                                    <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
+                                    <p className="text-sm text-gray-300 mb-4"></p>
+                                    <div className="flex gap-4">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-300 ease-in-out text-sm"
+                                        >
+                                            Live Demo
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-
-                            {/* Project 2 */}
-                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
-                                <h4 className="text-xl font-semibold mb-2">Illdy</h4>
-                                <p className="text-sm text-gray-300 mb-4">
-
-                                </p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href="https://illdy29.netlify.app/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    {/* <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
-                >
-                    Source Code
-                </a> */}
-                                </div>
-                            </div>
-
-                            {/* Project 3 */}
-                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
-                                <h4 className="text-xl font-semibold mb-2">Kerri</h4>
-                                <p className="text-sm text-gray-300 mb-4">
-
-                                </p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href="https://kerri29.netlify.app/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    {/* <a
-                    href="# "
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
-                >
-                    Source Code
-                </a> */}
-                                </div>
-                            </div>
-
-                            {/* Project 4 */}
-                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
-                                <h4 className="text-xl font-semibold mb-2">Alma </h4>
-                                <p className="text-sm text-gray-300 mb-4">
-
-                                </p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href="https://alma29.netlify.app/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    {/* <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
-                >
-                    Source Code
-                </a> */}
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
-
 
                 </div>
             </div>
