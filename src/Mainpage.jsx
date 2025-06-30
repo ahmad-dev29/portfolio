@@ -130,10 +130,116 @@ function Mainpage() {
                     </div>
 
                     {/* Projects Placeholder */}
+                    {/* Projects Section */}
                     <div id="projects" className="mt-12 text-white">
-                        <h3 className="text-2xl mb-4">Projects</h3>
-                        <p className="text-gray-300">Coming soon...</p>
+                        <h3 className="text-2xl mb-6">Projects</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Project 1 */}
+                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
+                                <h4 className="text-xl font-semibold mb-2">Limerick</h4>
+                                <p className="text-sm text-gray-300 mb-4">
+
+                                </p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://limerick29.netlify.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
+                                    >
+                                        Live Demo
+                                    </a>
+                                    {/* <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
+                >
+                    Source Code
+                </a> */}
+                                </div>
+                            </div>
+
+                            {/* Project 2 */}
+                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
+                                <h4 className="text-xl font-semibold mb-2">Illdy</h4>
+                                <p className="text-sm text-gray-300 mb-4">
+
+                                </p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://illdy29.netlify.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
+                                    >
+                                        Live Demo
+                                    </a>
+                                    {/* <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
+                >
+                    Source Code
+                </a> */}
+                                </div>
+                            </div>
+
+                            {/* Project 3 */}
+                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
+                                <h4 className="text-xl font-semibold mb-2">Kerri</h4>
+                                <p className="text-sm text-gray-300 mb-4">
+
+                                </p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://kerri29.netlify.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
+                                    >
+                                        Live Demo
+                                    </a>
+                                    {/* <a
+                    href="# "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
+                >
+                    Source Code
+                </a> */}
+                                </div>
+                            </div>
+
+                            {/* Project 4 */}
+                            <div className="bg-black/30 rounded-xl p-6 shadow-md hover:bg-black/50 transition">
+                                <h4 className="text-xl font-semibold mb-2">Alma </h4>
+                                <p className="text-sm text-gray-300 mb-4">
+
+                                </p>
+                                <div className="flex gap-4">
+                                    <a
+                                        href="https://alma29.netlify.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700 text-sm"
+                                    >
+                                        Live Demo
+                                    </a>
+                                    {/* <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-800 text-sm"
+                >
+                    Source Code
+                </a> */}
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
 
                 </div>
             </div>
