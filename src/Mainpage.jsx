@@ -27,6 +27,20 @@ function Mainpage() {
         }, 3000);
         return () => clearInterval(interval);
     }, []);
+    const colorClass = [
+        'bg-blue-600', 'bg-emerald-500', 'bg-rose-600', 'bg-fuchsia-600', 'bg-sky-500',
+        'bg-cyan-500', 'bg-purple-600', 'bg-pink-600', 'bg-indigo-500', 'bg-teal-600',
+        'bg-green-500', 'bg-yellow-400', 'bg-blue-900', 'bg-purple-800', 'bg-rose-800',
+        'bg-violet-500', 'bg-orange-500', 'bg-red-500', 'bg-amber-500', 'bg-lime-500',
+    ];
+    const [bgiIndex, setBgiIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setBigIndex((prev) => (prev + 1) % colorClass.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="relative w-full h-screen overflow-hidden">
@@ -86,7 +100,7 @@ function Mainpage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <button className="mt-4 px-4 py-2 rounded-full bg-blue-700 hover:bg-blue-800 transition-colors duration-300 ease-in-out">
+                                <button className= {` ${colorClass[bgiIndex]} mt-4 px-4 py-2 rounded-full`}>
                                     Download Resume
                                 </button>
                             </a>
